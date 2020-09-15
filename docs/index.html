@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module voronoi</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>voronoi</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/lucas/voronoi/voronoi/voronoi.py">/home/lucas/voronoi/voronoi/voronoi.py</a></font></td></tr></table>
+    <p><tt>voronoi<br>
+-------<br>
+&nbsp;<br>
+Voronoi&nbsp;Tessellations&nbsp;of&nbsp;weighted&nbsp;generators&nbsp;in&nbsp;the&nbsp;Euclidean&nbsp;plane</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="csv.html">csv</a><br>
+<a href="lxml.etree.html">lxml.etree</a><br>
+<a href="matplotlib.html">matplotlib</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+<a href="networkx.html">networkx</a><br>
+<a href="os.html">os</a><br>
+</td><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+<a href="scipy.html">scipy</a><br>
+<a href="skimage.html">skimage</a><br>
+</td><td width="25%" valign=top><a href="subprocess.html">subprocess</a><br>
+<a href="uuid.html">uuid</a><br>
+<a href="warnings.html">warnings</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="voronoi.html#CircularVoronoiTessellation">CircularVoronoiTessellation</a>
+</font></dt><dt><font face="helvetica, arial"><a href="voronoi.html#DelaunayTriangulation">DelaunayTriangulation</a>
+</font></dt><dt><font face="helvetica, arial"><a href="voronoi.html#Generators">Generators</a>
+</font></dt><dt><font face="helvetica, arial"><a href="voronoi.html#VoronoiTessellation">VoronoiTessellation</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="CircularVoronoiTessellation">class <strong>CircularVoronoiTessellation</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Generalized&nbsp;Voronoi&nbsp;Tessellation&nbsp;yielding&nbsp;a&nbsp;morphology&nbsp;<br>
+widely&nbsp;similar&nbsp;to&nbsp;that&nbsp;of&nbsp;keratinocytes&nbsp;in&nbsp;epithelial&nbsp;cell&nbsp;layers<br>
+&nbsp;<br>
+"Generalized&nbsp;Voronoi&nbsp;Tessellation&nbsp;as&nbsp;a&nbsp;Model&nbsp;of<br>
+Two-dimensional&nbsp;Cell&nbsp;Tissue&nbsp;Dynamics",&nbsp;Bock&nbsp;et&nbsp;al.&nbsp;(2009)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="CircularVoronoiTessellation-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Voronoi&nbsp;Tessellation</tt></dd></dl>
+
+<dl><dt><a name="CircularVoronoiTessellation-compute_from_generators"><strong>compute_from_generators</strong></a>(self, generators)</dt><dd><tt>Generate&nbsp;the&nbsp;weighted&nbsp;Voronoi&nbsp;Tessellation&nbsp;from&nbsp;a&nbsp;set&nbsp;of&nbsp;generators<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+generators&nbsp;:&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generators&nbsp;to&nbsp;compute&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="CircularVoronoiTessellation-load"><strong>load</strong></a>(self, file_name)</dt><dd><tt>Import&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;from&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;a&nbsp;.graphml&nbsp;file&nbsp;to&nbsp;load&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="CircularVoronoiTessellation-plot"><strong>plot</strong></a>(self, include_generators=True, edge_color='black', generator_color='black', edge_style='solid', edge_width=1.0, ax=None)</dt><dd><tt>Create&nbsp;a&nbsp;Matplotlib&nbsp;axis&nbsp;resembling&nbsp;the&nbsp;Voronoi&nbsp;Tessellation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+include_generators&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;True,&nbsp;include&nbsp;generators&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;was&nbsp;generated&nbsp;from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;in&nbsp;the&nbsp;plot&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+edge_color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;edge&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+generator_color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generator&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+edge_style&nbsp;:&nbsp;Matplotlib&nbsp;line&nbsp;style<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;style&nbsp;for&nbsp;edges&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"solid")<br>
+&nbsp;<br>
+edge_width&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;width&nbsp;for&nbsp;edges<br>
+&nbsp;<br>
+ax&nbsp;:&nbsp;Matplotlib&nbsp;axis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Axis&nbsp;to&nbsp;plot&nbsp;on,&nbsp;falls&nbsp;back&nbsp;on&nbsp;current&nbsp;ax&nbsp;for&nbsp;None&nbsp;(Default&nbsp;value&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="CircularVoronoiTessellation-save"><strong>save</strong></a>(self, file_name, overwrite=True)</dt><dd><tt>Export&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;to&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;to&nbsp;save&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;to<br>
+&nbsp;<br>
+overwrite&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overwrite&nbsp;the&nbsp;specified&nbsp;file&nbsp;location&nbsp;should&nbsp;it&nbsp;exist&nbsp;if&nbsp;True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;append&nbsp;suffix&nbsp;to&nbsp;file&nbsp;name&nbsp;otherwise&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;that&nbsp;Voronoi&nbsp;Tessellation&nbsp;was&nbsp;saved&nbsp;to</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DelaunayTriangulation">class <strong>DelaunayTriangulation</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Delaunay&nbsp;Trinagulation<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DelaunayTriangulation-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Delaunay&nbsp;Triangulation</tt></dd></dl>
+
+<dl><dt><a name="DelaunayTriangulation-compute_from_generators"><strong>compute_from_generators</strong></a>(self, generators)</dt><dd><tt>Generate&nbsp;the&nbsp;Delaunay&nbsp;Triangulation&nbsp;from&nbsp;a&nbsp;set&nbsp;of&nbsp;generators<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+generators&nbsp;:&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generators&nbsp;to&nbsp;compute&nbsp;the&nbsp;Delaunay&nbsp;Triangulation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="DelaunayTriangulation-load"><strong>load</strong></a>(self, file_name)</dt><dd><tt>Import&nbsp;the&nbsp;Delaunay&nbsp;Triangulation&nbsp;from&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;a&nbsp;.graphml&nbsp;file&nbsp;to&nbsp;load&nbsp;the<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Delaunay&nbsp;Triangulation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="DelaunayTriangulation-plot"><strong>plot</strong></a>(self, include_generators=True, edge_color='black', generator_color='black', edge_style='solid', edge_width=1.0, ax=None)</dt><dd><tt>Create&nbsp;a&nbsp;Matplotlib&nbsp;axis&nbsp;resembling&nbsp;the&nbsp;Delaunay&nbsp;Triangulation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+edge_color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;edge&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+generator_color&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generator&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+include_generators&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;True,&nbsp;include&nbsp;generators&nbsp;the&nbsp;Delaunay&nbsp;Triangulation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;was&nbsp;generated&nbsp;from&nbsp;in&nbsp;the&nbsp;plot&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+edge_style&nbsp;:&nbsp;Matplotlib&nbsp;line&nbsp;style<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;style&nbsp;for&nbsp;edges&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"solid")<br>
+&nbsp;<br>
+edge_width&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;width&nbsp;for&nbsp;edges<br>
+&nbsp;<br>
+ax&nbsp;:&nbsp;Matplotlib&nbsp;axis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Axis&nbsp;to&nbsp;plot&nbsp;on,&nbsp;falls&nbsp;back&nbsp;on&nbsp;current&nbsp;ax&nbsp;for&nbsp;None&nbsp;(Default&nbsp;value&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="DelaunayTriangulation-save"><strong>save</strong></a>(self, file_name, overwrite=True)</dt><dd><tt>Export&nbsp;the&nbsp;Delaunay&nbsp;Triangulation&nbsp;to&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;to&nbsp;save&nbsp;the&nbsp;Delaunay&nbsp;Triangulation&nbsp;to<br>
+&nbsp;<br>
+overwrite&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overwrite&nbsp;the&nbsp;specified&nbsp;file&nbsp;location&nbsp;should&nbsp;it&nbsp;exist&nbsp;if&nbsp;True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;append&nbsp;suffix&nbsp;to&nbsp;file&nbsp;name&nbsp;otherwise&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;that&nbsp;Delaunay&nbsp;Triangulation&nbsp;was&nbsp;saved&nbsp;to</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Generators">class <strong>Generators</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Generators">Generators</a><br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Generators-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt><a href="#Generators">Generators</a></tt></dd></dl>
+
+<dl><dt><a name="Generators-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>len()<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+int&nbsp;:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;generators</tt></dd></dl>
+
+<dl><dt><a name="Generators-compute_from_image"><strong>compute_from_image</strong></a>(self, file_name, intensity_thresh=(83.0, 90.0), size_thresh=65.0, channel='B')</dt><dd><tt>Determine&nbsp;a&nbsp;set&nbsp;of&nbsp;generators&nbsp;from&nbsp;an&nbsp;image<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;image&nbsp;to&nbsp;determine&nbsp;the&nbsp;generators&nbsp;from<br>
+&nbsp;<br>
+intensity_thresh&nbsp;:&nbsp;(float,&nbsp;float)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentile&nbsp;range&nbsp;of&nbsp;rescaled&nbsp;channel&nbsp;intensity&nbsp;below&nbsp;which&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assign&nbsp;pixel&nbsp;to&nbsp;background&nbsp;and&nbsp;above&nbsp;which&nbsp;to<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assign&nbsp;pixel&nbsp;to&nbsp;nuclei,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;correspond&nbsp;to&nbsp;sensitivity&nbsp;and&nbsp;selectivity,&nbsp;respectively<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;=&nbsp;(83.0,&nbsp;93.0))<br>
+&nbsp;<br>
+size_thresh&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentile&nbsp;of&nbsp;<a href="builtins.html#object">object</a>&nbsp;size&nbsp;below&nbsp;which&nbsp;to&nbsp;discard&nbsp;a&nbsp;potential<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nucleus&nbsp;as&nbsp;noise&nbsp;(Default&nbsp;=&nbsp;40.0)<br>
+&nbsp;<br>
+channel&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;channel&nbsp;("R",&nbsp;"G",&nbsp;"B")&nbsp;of&nbsp;image&nbsp;to&nbsp;use&nbsp;for&nbsp;segmentation,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;falls&nbsp;back&nbsp;to&nbsp;gray&nbsp;scale&nbsp;for&nbsp;other&nbsp;entries&nbsp;but&nbsp;defaults&nbsp;to&nbsp;blue<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;DAPI&nbsp;(Default&nbsp;=&nbsp;"B")<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="Generators-distance"><strong>distance</strong></a>(self, generators)</dt><dd><tt>Map&nbsp;the&nbsp;closest&nbsp;pairs&nbsp;from&nbsp;two&nbsp;sets&nbsp;of&nbsp;generators&nbsp;injectively<br>
+and&nbsp;return&nbsp;their&nbsp;distances<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+generators&nbsp;:&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;set&nbsp;of&nbsp;generators&nbsp;to&nbsp;compare&nbsp;with<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;smallest&nbsp;pairwise&nbsp;distances&nbsp;of&nbsp;generators&nbsp;from&nbsp;both&nbsp;sets</tt></dd></dl>
+
+<dl><dt><a name="Generators-load"><strong>load</strong></a>(self, file_name)</dt><dd><tt>Import&nbsp;the&nbsp;set&nbsp;of&nbsp;generators&nbsp;from&nbsp;a&nbsp;.csv&nbsp;file<br>
+&nbsp;<br>
+Each&nbsp;is&nbsp;assumed&nbsp;to&nbsp;specify&nbsp;the&nbsp;x-coordinate,&nbsp;y-coordinate&nbsp;<br>
+and&nbsp;weight&nbsp;of&nbsp;one&nbsp;generator<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;a&nbsp;.csv&nbsp;file&nbsp;to&nbsp;load&nbsp;the&nbsp;generators&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="Generators-plot"><strong>plot</strong></a>(self, color='black', ax=None)</dt><dd><tt>Create&nbsp;a&nbsp;Matplotlib&nbsp;axis&nbsp;resembling&nbsp;the&nbsp;generators&nbsp;on&nbsp;a&nbsp;given&nbsp;figure<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generator&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+ax&nbsp;:&nbsp;Matplotlib&nbsp;axis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Axis&nbsp;to&nbsp;plot&nbsp;on,&nbsp;falls&nbsp;back&nbsp;on&nbsp;current&nbsp;ax&nbsp;for&nbsp;None&nbsp;(Default&nbsp;value&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="Generators-randomize"><strong>randomize</strong></a>(self, dim=(1000, 1000), num=100, weight_range=(1.0, 5.0), min_distance=1.0, padding=0.125)</dt><dd><tt>Initialize&nbsp;a&nbsp;set&nbsp;of&nbsp;generators&nbsp;randomly<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+dim&nbsp;:&nbsp;(int,&nbsp;int)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upper&nbsp;bounds&nbsp;for&nbsp;the&nbsp;position&nbsp;of&nbsp;any&nbsp;generator<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;value&nbsp;=&nbsp;(1000,&nbsp;1000))<br>
+&nbsp;<br>
+num&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;generators&nbsp;(Default&nbsp;value&nbsp;=&nbsp;100)<br>
+&nbsp;<br>
+weight_range&nbsp;:&nbsp;(float,&nbsp;float)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;range&nbsp;of&nbsp;generator&nbsp;weights&nbsp;(Default&nbsp;value&nbsp;=&nbsp;(1.0,&nbsp;5.0))<br>
+&nbsp;<br>
+min_distance&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;minimum&nbsp;proportion&nbsp;of&nbsp;the&nbsp;mean&nbsp;weight&nbsp;of&nbsp;between&nbsp;any&nbsp;two&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;value&nbsp;=&nbsp;1.0)<br>
+&nbsp;<br>
+padding&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mininmum&nbsp;proportion&nbsp;of&nbsp;dimension&nbsp;at&nbsp;borders&nbsp;not&nbsp;to&nbsp;place&nbsp;generators&nbsp;in<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;value&nbsp;=&nbsp;0.125)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="Generators-randomize_weights"><strong>randomize_weights</strong></a>(self, weight_range=(1.0, 5.0), min_distance=1.0)</dt><dd><tt>Randomize&nbsp;weights&nbsp;avoiding&nbsp;overlaps<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+&nbsp;<br>
+weight_range&nbsp;:&nbsp;(float,&nbsp;float)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;range&nbsp;of&nbsp;generator&nbsp;weights&nbsp;(Default&nbsp;value&nbsp;=&nbsp;(1.0,&nbsp;5.0))<br>
+&nbsp;<br>
+min_distance&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;minimum&nbsp;proportion&nbsp;of&nbsp;the&nbsp;mean&nbsp;weight&nbsp;of&nbsp;between&nbsp;any&nbsp;two&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;value&nbsp;=&nbsp;1.0)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="Generators-save"><strong>save</strong></a>(self, file_name, overwrite=True)</dt><dd><tt>Export&nbsp;the&nbsp;generators&nbsp;to&nbsp;a&nbsp;.csv&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;to&nbsp;save&nbsp;the&nbsp;generators&nbsp;to<br>
+&nbsp;<br>
+overwrite&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overwrite&nbsp;the&nbsp;specified&nbsp;file&nbsp;location&nbsp;should&nbsp;it&nbsp;exist&nbsp;if&nbsp;True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;append&nbsp;suffix&nbsp;to&nbsp;file&nbsp;name&nbsp;otherwise&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;that&nbsp;generators&nbsp;were&nbsp;saved&nbsp;to</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="VoronoiTessellation">class <strong>VoronoiTessellation</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Voronoi&nbsp;Tessellation<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="VoronoiTessellation-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Voronoi&nbsp;Tessellation</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-approximate_generators"><strong>approximate_generators</strong></a>(self, epsilon=0.0)</dt><dd><tt>Approximate&nbsp;a&nbsp;set&nbsp;of&nbsp;generators&nbsp;given&nbsp;the&nbsp;Voronoi&nbsp;Tessellation<br>
+and&nbsp;compute&nbsp;face&nbsp;data<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+epsilon&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;threshold&nbsp;for&nbsp;regression&nbsp;(Default&nbsp;0.0).&nbsp;If&nbsp;the&nbsp;error&nbsp;of&nbsp;the&nbsp;vertices&nbsp;can<br>
+&nbsp;&nbsp;&nbsp;&nbsp;consistently&nbsp;not&nbsp;be&nbsp;reduced&nbsp;by&nbsp;more&nbsp;than&nbsp;epsilon,&nbsp;terminate.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Epsilon&nbsp;:=&nbsp;0.0&nbsp;for&nbsp;best&nbsp;approximation,&nbsp;runtime&nbsp;decreases&nbsp;with&nbsp;increasing&nbsp;epsilon.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;approximated&nbsp;generators<br>
+&nbsp;<br>
+ndarray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mean&nbsp;errors&nbsp;resulting&nbsp;from&nbsp;accepted&nbsp;translations<br>
+&nbsp;<br>
+ndarray<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mean&nbsp;errors&nbsp;resulting&nbsp;from&nbsp;any&nbsp;translations</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-compute_from_generators"><strong>compute_from_generators</strong></a>(self, generators)</dt><dd><tt>Generate&nbsp;the&nbsp;weighted&nbsp;Voronoi&nbsp;Tessellation&nbsp;from&nbsp;a&nbsp;set&nbsp;of&nbsp;generators<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+generators&nbsp;:&nbsp;generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generators&nbsp;to&nbsp;compute&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-compute_from_image"><strong>compute_from_image</strong></a>(self, file_name, intensity_thresh=75.0, size_thresh=70.0, node_proximity=5, channel='G')</dt><dd><tt>Determine&nbsp;a&nbsp;Voronoi&nbsp;Tessellation&nbsp;from&nbsp;an&nbsp;image<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;image&nbsp;to&nbsp;determine&nbsp;the&nbsp;generators&nbsp;from<br>
+&nbsp;<br>
+intensity_thresh&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentile&nbsp;of&nbsp;channel&nbsp;intensity&nbsp;above&nbsp;which&nbsp;to&nbsp;assign&nbsp;pixel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;to&nbsp;membrane&nbsp;(Default&nbsp;=&nbsp;75.0)<br>
+&nbsp;<br>
+size_thresh&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;percentile&nbsp;of&nbsp;intermembrane&nbsp;objects'&nbsp;size&nbsp;below&nbsp;which&nbsp;to&nbsp;discard<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;face&nbsp;(Default&nbsp;=&nbsp;70.0)<br>
+&nbsp;<br>
+node_proximity&nbsp;:&nbsp;int<br>
+&nbsp;&nbsp;&nbsp;&nbsp;minimum&nbsp;number&nbsp;of&nbsp;pixels&nbsp;in&nbsp;between&nbsp;two&nbsp;separate&nbsp;nodes,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;corresponds&nbsp;to&nbsp;resolution&nbsp;of&nbsp;graph&nbsp;structure&nbsp;given<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;connectivity&nbsp;based&nbsp;skeletonization&nbsp;of&nbsp;pixels&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assigned&nbsp;to&nbsp;membrane<br>
+&nbsp;&nbsp;&nbsp;&nbsp;(Default&nbsp;=&nbsp;5)<br>
+&nbsp;<br>
+channel&nbsp;:&nbsp;str,&nbsp;optional<br>
+&nbsp;&nbsp;&nbsp;&nbsp;color&nbsp;channel&nbsp;("R",&nbsp;"G",&nbsp;"B")&nbsp;of&nbsp;image&nbsp;to&nbsp;use&nbsp;for&nbsp;segmentation,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;falls&nbsp;back&nbsp;to&nbsp;gray&nbsp;scale,&nbsp;but&nbsp;defaults&nbsp;to&nbsp;green&nbsp;for<br>
+&nbsp;&nbsp;&nbsp;&nbsp;immunofluorescence&nbsp;staining&nbsp;(Default&nbsp;=&nbsp;"G")<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;mean&nbsp;deviation&nbsp;between&nbsp;the&nbsp;determined&nbsp;Voronoi&nbsp;Tessellation's&nbsp;vertices<br>
+&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;those&nbsp;of&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;resulting&nbsp;from<br>
+&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;approximated&nbsp;generators</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-distance"><strong>distance</strong></a>(self, voronoi_tessellation)</dt><dd><tt>Map&nbsp;the&nbsp;closest&nbsp;pairs&nbsp;from&nbsp;two&nbsp;sets&nbsp;of&nbsp;vertices&nbsp;of&nbsp;a&nbsp;Voronoi&nbsp;Tessellation&nbsp;injectively<br>
+and&nbsp;return&nbsp;their&nbsp;distances<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+voronoi_tessellation&nbsp;:&nbsp;Voronoi&nbsp;Tessellation<br>
+&nbsp;&nbsp;&nbsp;&nbsp;a&nbsp;Voronoi&nbsp;Tessellation&nbsp;to&nbsp;compare&nbsp;with<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;smallest&nbsp;pairwise&nbsp;distances&nbsp;of&nbsp;generators&nbsp;from&nbsp;both&nbsp;sets</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-face_centroids"><strong>face_centroids</strong></a>(self, weight=1.0)</dt><dd><tt>Return&nbsp;face&nbsp;centroids&nbsp;as&nbsp;a&nbsp;set&nbsp;of&nbsp;generators&nbsp;given&nbsp;the&nbsp;Voronoi&nbsp;Tessellation.<br>
+As&nbsp;it&nbsp;is&nbsp;necessary&nbsp;to&nbsp;compute&nbsp;faces&nbsp;for&nbsp;this,&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;is<br>
+updated&nbsp;should&nbsp;face&nbsp;data&nbsp;not&nbsp;be&nbsp;available.&nbsp;Otherwise&nbsp;the&nbsp;face&nbsp;data&nbsp;is<br>
+simply&nbsp;exported&nbsp;to&nbsp;a&nbsp;set&nbsp;of&nbsp;generators.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+weight&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;uniform&nbsp;weight&nbsp;of&nbsp;centroids<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+generators<br>
+&nbsp;&nbsp;&nbsp;&nbsp;centroid&nbsp;generators</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-load"><strong>load</strong></a>(self, file_name)</dt><dd><tt>Import&nbsp;the&nbsp;Voronoi&nbsp;)Tessellation&nbsp;from&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;of&nbsp;a&nbsp;.graphml&nbsp;file&nbsp;to&nbsp;load&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;from<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-plot"><strong>plot</strong></a>(self, include_generators=True, edge_color='black', generator_color='black', edge_style='solid', edge_width=1.0, ax=None)</dt><dd><tt>Create&nbsp;a&nbsp;Matplotlib&nbsp;axis&nbsp;resembling&nbsp;the&nbsp;Voronoi&nbsp;Tessellation<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+include_generators&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;True,&nbsp;include&nbsp;generators&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;was&nbsp;generated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;from&nbsp;in&nbsp;the&nbsp;plot&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+edge_color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;edge&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+generator_color&nbsp;:&nbsp;Matplotlib&nbsp;color<br>
+&nbsp;&nbsp;&nbsp;&nbsp;generator&nbsp;color&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"black")<br>
+&nbsp;<br>
+edge_style&nbsp;:&nbsp;Matplotlib&nbsp;line&nbsp;style<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;style&nbsp;for&nbsp;edges&nbsp;(Default&nbsp;value&nbsp;=&nbsp;"solid")<br>
+&nbsp;<br>
+edge_width&nbsp;:&nbsp;float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;line&nbsp;width&nbsp;for&nbsp;edges<br>
+&nbsp;<br>
+ax&nbsp;:&nbsp;Matplotlib&nbsp;axis<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Axis&nbsp;to&nbsp;plot&nbsp;on,&nbsp;falls&nbsp;back&nbsp;on&nbsp;current&nbsp;ax&nbsp;for&nbsp;None&nbsp;(Default&nbsp;value&nbsp;=&nbsp;None)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None</tt></dd></dl>
+
+<dl><dt><a name="VoronoiTessellation-save"><strong>save</strong></a>(self, file_name, overwrite=True)</dt><dd><tt>Export&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;to&nbsp;a&nbsp;.graphml&nbsp;file<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+file_name&nbsp;:&nbsp;str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;to&nbsp;save&nbsp;the&nbsp;Voronoi&nbsp;Tessellation&nbsp;to<br>
+&nbsp;<br>
+overwrite&nbsp;:&nbsp;bool<br>
+&nbsp;&nbsp;&nbsp;&nbsp;overwrite&nbsp;the&nbsp;specified&nbsp;file&nbsp;location&nbsp;should&nbsp;it&nbsp;exist&nbsp;if&nbsp;True,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;append&nbsp;suffix&nbsp;to&nbsp;file&nbsp;name&nbsp;otherwise&nbsp;(Default&nbsp;value&nbsp;=&nbsp;True)<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+str<br>
+&nbsp;&nbsp;&nbsp;&nbsp;file&nbsp;location&nbsp;that&nbsp;Voronoi&nbsp;Tessellation&nbsp;was&nbsp;saved&nbsp;to</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DPI</strong> = 1200</td></tr></table>
+</body></html>
